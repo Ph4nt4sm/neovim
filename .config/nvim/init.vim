@@ -49,7 +49,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'freeo/vim-kalisi'
 
 
-Plug 'thirtythreeforty/lessspace'
+Plug 'thirtythreeforty/lessspace.vim'
 
 
 
