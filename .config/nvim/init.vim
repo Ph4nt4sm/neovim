@@ -37,7 +37,7 @@ Plug 'benekastah/neomake'
 
 Plug 'easymotion/vim-easymotion'
 
-Plug 'valloric/youcompleteme'
+Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer'  }
 
 Plug 'octol/vim-cpp-enhanced-highlight'	
 
@@ -77,6 +77,9 @@ set mouse-=a
 set completeopt=menuone,preview,noinsert
 " Let vim-gitgutter do its thing on large files
 let g:gitgutter_max_signs=10000
+
+set clipboard+=unnamedplus
+
 
 filetype indent on
 	
