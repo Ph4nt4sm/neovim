@@ -1,3 +1,24 @@
+
+
+
+  set smartindent
+  set expandtab         "tab to spaces
+  set tabstop=2         "the width of a tab
+  set shiftwidth=2      "the width for indent
+  set foldenable
+  set foldmethod=indent "folding by indent
+  set foldlevel=99
+  set ignorecase        "ignore the case when search texts
+  set smartcase         "if searching text contains uppercase case will not be ignored
+" Lookings
+  set number           "line number
+  set cursorline       "hilight the line of the cursor
+  set cursorcolumn     "hilight the column of the cursor
+  set nowrap           "no line wrapping
+
+
+
+
 " Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -48,6 +69,8 @@ Plug 'airblade/vim-gitgutter'
 " Colour Scheme
 Plug 'freeo/vim-kalisi'
 
+"tags
+Plug 'ludovicchabant/vim-gutentags'
 
 Plug 'thirtythreeforty/lessspace.vim'
 
