@@ -110,6 +110,9 @@ syntax enable
 
 "ctrl +n
 map <C-n> :NERDTreeToggle<CR>
+map <C-c> "+y<CR>
+map <C-v> "+p<CR>
+
 colorscheme kalisi
 set background=dark
 
