@@ -1,24 +1,5 @@
 
 
-
-  set smartindent
-  set expandtab         "tab to spaces
-  set tabstop=2         "the width of a tab
-  set shiftwidth=2      "the width for indent
-  set foldenable
-  set foldmethod=indent "folding by indent
-  set foldlevel=99
-  set ignorecase        "ignore the case when search texts
-  set smartcase         "if searching text contains uppercase case will not be ignored
-" Lookings
-  set number           "line number
-  set cursorline       "hilight the line of the cursor
-  set cursorcolumn     "hilight the column of the cursor
-  set nowrap           "no line wrapping
-
-
-
-
 " Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -60,6 +41,7 @@ Plug 'easymotion/vim-easymotion'
 
 Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer'  }
 
+
 Plug 'octol/vim-cpp-enhanced-highlight'	
 
 "GIT
@@ -79,18 +61,62 @@ Plug 'thirtythreeforty/lessspace.vim'
 Plug 'kien/ctrlp.vim'
 
 
+"Plug 'bbchung/Clamp'
+
+
 " Initialize plugin system
 call plug#end()
 
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set noexpandtab
+
+	autocmd BufWinLeave *.* mkview
+	autocmd BufWinEnter *.* silent loadview 
+
+ 	set filetype=on
+	filetype plugin on
+	syntax enable
+	set foldmethod=indent   
+	set foldnestmax=10
+	set nofoldenable
+	set foldlevel=2
+	set smartindent
+	set expandtab         "tab to spaces
+	set tabstop=2         "the width of a tab
+	set shiftwidth=2      "the width for indent
+	set foldenable
+	set foldlevel=99
+	set ignorecase        "ignore the case when search texts
+	set smartcase         "if searching text contains uppercase case will not be ignored
+" 	Lookings
+	set relativenumber           "line number
+	set cursorline       "hilight the line of the cursor
+	set cursorcolumn     "hilight the column of the cursor
+	set nowrap           "no line wrapping
+	set hidden
+
+	colorscheme kalisi
+	set background=dark
+
+	set tabstop=4
+	set softtabstop=4
+	set shiftwidth=4
+	set noexpandtab
+
+	set clipboard+=unnamedplus
+
+
+	"let g:clamp_autostart = 0
+
+	let g:cpp_class_scope_highlight = 1
+	let g:cpp_member_variable_highlight = 1
+	let g:cpp_experimental_simple_template_highlight = 1
+	let g:cpp_concepts_highlight = 1
+
 
 
 
 """"""" General coding stuff """""""
+
 " Highlight 110th column
 set colorcolumn=110
 " Always show status bar
@@ -104,19 +130,17 @@ set completeopt=menuone,preview,noinsert
 " Let vim-gitgutter do its thing on large files
 let g:gitgutter_max_signs=10000
 
-set clipboard+=unnamedplus
 
 
 	
-syntax enable
+
 
 "ctrl +n
 map <C-n> :NERDTreeToggle<CR>
 map <C-c> "+y<CR>
 map <C-v> "+p<CR>
 
-colorscheme kalisi
-set background=dark
+
 
 let mapleader="\<SPACE>"
 " Open file menu
@@ -148,7 +172,7 @@ map <Leader>k <Plug>(easymotion-k)
 
 
 
-map <F8> :!g++ % && ./a.out<CR>
+map <F8> :!make clean && make VulkanTest && ./VulkanTest<CR>
 
 
 
