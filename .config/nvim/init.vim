@@ -203,6 +203,19 @@ function! FindTopLevelProjectDir()
     return toplevelpath
 endfunction
 
+"Customermisations
+
+"ctrl n for nerd and copy paste
+map <C-n> :NERDTreeToggle<CR>
+map <C-c> "+y<CR>
+map <C-v> "+p<CR>
+
+map <F8> :!make && ./TheVulkanProject<CR>
+
+" Highlight 110th column
+set colorcolumn=110
+
+
 " Do not enable unless you want makeprg auto-set for all filetypes
 " Set in ftplugin files each desired filetype
 " autocmd BufNewFile,BufRead * call g:BuildInSubDir("/build")
