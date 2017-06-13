@@ -40,7 +40,6 @@ nmap <Space> i_<Esc>r
 " normal esc from terminal window
 tnoremap <Esc> <C-\><C-n>
 
-
 "esc from search
 nnoremap <Esc> :noh<return><Esc>
 
@@ -206,19 +205,6 @@ function! FindTopLevelProjectDir()
     let toplevelpath = '/' . join(gitdirsplit[:-2],'/')
     return toplevelpath
 endfunction
-
-"Customermisations
-
-"ctrl n for nerd and copy paste
-map <C-n> :NERDTreeToggle<CR>
-map <C-c> "+y<CR>
-map <C-v> "+p<CR>
-
-map <F8> :!make && ./TheVulkanProject<CR>
-
-" Highlight 110th column
-set colorcolumn=110
-
 
 " Do not enable unless you want makeprg auto-set for all filetypes
 " Set in ftplugin files each desired filetype
